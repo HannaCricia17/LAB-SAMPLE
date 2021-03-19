@@ -7,5 +7,68 @@ hello its 8:12
 ibay edit say hi
 
 try niyo nga ituloy 'to
-//method 1 ibay
+
 dito tayo mag lalagay
+
+//method 1 ibay
+
+	public static void ibayEven(){
+	Scanner sc=new Scanner(System.in);
+		boolean validInput = false;
+		int even;
+		System.out.println("Displaying Even Number/s");
+		do{
+
+			try{
+				System.out.println("Input a range (integer only) between: ");
+				int first = Integer.parseInt(sc.nextLine());
+				System.out.println("to ");
+				int second = Integer.parseInt(sc.nextLine());
+				validInput = true;
+				System.out.print("\nEven number/s between "+first+" and "+second+" are: ");
+
+				for(int i=first; i<=second; i++){ 
+					even=i%2; 
+					if(even==0) 
+						System.out.print(i+" ");
+				}
+				System.out.println();
+				System.out.println("---------------------------------------------");
+			}catch(IllegalArgumentException e){
+				System.out.println("Invalid value, input again!\n");
+			}
+		}while(!validInput);
+		}
+		
+		
+		
+		
+	public static void ibayOdd(){
+		int odd;
+		Scanner sc=new Scanner(System.in);
+		boolean validInput = false;
+		
+		System.out.println("Displaying Odd Number/s");
+		do{
+
+			try{
+				System.out.println("Input a range (integer only) between: ");
+				int first = Integer.parseInt(sc.nextLine());
+				System.out.println("to ");
+				int second = Integer.parseInt(sc.nextLine());
+				validInput = true;
+				System.out.println("\nOdd number/s between "+first+" and "+second+" are: ");
+
+				for(int i=first; i<=second; i++){ 
+					odd=i%2; 
+					if(odd==1) 
+						System.out.print(i+" ");
+				}
+				
+			}catch(IllegalArgumentException e){
+				System.out.println("Invalid value, input again!\n");
+			}
+		}while(!validInput);
+		}
+
+}
